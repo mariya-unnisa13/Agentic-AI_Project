@@ -7,10 +7,8 @@ load_dotenv()
 client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
  
 response = client.models.generate_content(
-    model="gemini-3.8-flash",   # use the current name shown in AI Studio
-    contents="Explain SAP"
-    contents="Main Features"
-    contents="Use Cases and Pros/Cons"
+    model="gemini-3.5-flash-lite",   # use the current name shown in AI Studio
+    contents="Explain SAP, main features, use cases, and pros/cons of using SAP in business operations."
 )
  
 print(response.text)
